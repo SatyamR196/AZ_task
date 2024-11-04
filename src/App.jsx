@@ -11,10 +11,12 @@ import Switch from './Micro_components/Switch';
 
 const darkTheme={
   bg : "linear-gradient(180deg, #23094b 0%, #103673 90%)",
+  bgR88 : "#1c073c",
   color : "white"
  };
  const lightTheme={
    bg : "linear-gradient(180deg, #FFFFFF 0%, #F1FBFF 100%)",
+   bgR88 : "white",
    color : "black"
  }
 
@@ -49,4 +51,6 @@ const Wrapper = styled.div`
     width: 1920px;
     border: 5px solid skyblue;
     background: ${(props)=> props.theme.bg};
+    position: relative;
+    overflow: hidden;
 `;
