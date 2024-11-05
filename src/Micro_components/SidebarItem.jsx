@@ -1,13 +1,14 @@
 import React from 'react'
-import styled from 'styled-components';
-
-function SidebarItem({text,logo,bg="white",weight=400}) {
+import styled, { useTheme } from 'styled-components';
+// var theme = useTheme();
+function SidebarItem({text,logo,bg="transparent",weight=400}){
+    
   return (
     <Item bg={bg}>
       <IconDiv>
         <img src={logo}/>
       </IconDiv>
-      <TextDiv weight={weight}>{text}</TextDiv>
+      {bg === "#D6F4FF" ? <TextDiv style={{color:"black"}} weight={weight}>{text}</TextDiv> : <TextDiv weight={weight}>{text}</TextDiv> }
     </Item>
   )
 }
@@ -19,7 +20,7 @@ export default SidebarItem
 const Item = styled.div`
     /* width:267px; */
     height: 64px;
-    /* background-color: ${props=>props.bg}; */
+    background-color: ${props=>props.bg};
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -27,6 +28,12 @@ const Item = styled.div`
     gap:20px;
     flex-grow: 0;
     flex-shrink: 0;
+    transition: ease-in-out 0.25s;
+    border-radius: 8px;
+    &:hover{
+        cursor: pointer;
+        background-color: ${props=>props.theme.hover};
+    }
 
 `
 const IconDiv = styled.div`
@@ -34,7 +41,7 @@ const IconDiv = styled.div`
     height: 32px;
     background-color: white;
 `
-const TextDiv = styled.div`
+export const TextDiv = styled.div`
     height: 40px;
     font-weight: ${props=>props.weight};
     font-size: 24px;

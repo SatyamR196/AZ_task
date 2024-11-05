@@ -14,14 +14,14 @@ function Sidebar() {
   return (
     <Container>
       <Headiv>
-      <SidebarItem text="AlgoZenith" logo={MenuIcon} bg="white" weight="900"/>
+      <SidebarItem text="AlgoZenith" logo={MenuIcon}  weight="900"/>
       </Headiv>
-      <SidebarItem text="Dashboard" logo={DashB} bg="white" weight="400"/>
-      <SidebarItem text="Dashboard" logo={LightBulb} bg="white" weight="400"/>
-      <SidebarItem text="Dashboard" logo={Forums} bg="white" weight="400"/>
-      <SidebarItem text="Dashboard" logo={UpSkill} bg="white" weight="400"/>
-      <SidebarItem text="Dashboard" logo={Contest} bg="white" weight="400"/>
-      <SidebarItem text="Dashboard" logo={LeaderB} bg="white" weight="400"/>
+      <SidebarItem text="Dashboard" logo={DashB}  weight="400"/>
+      <SidebarItem text="Dashboard" logo={LightBulb}  weight="400"/>
+      <SidebarItem text="Dashboard" logo={Forums}  weight="400"/>
+      <SidebarItem text="Dashboard" logo={UpSkill} bg="#D6F4FF" weight="400"/>
+      <SidebarItem text="Dashboard" logo={Contest}  weight="400"/>
+      <SidebarItem text="Dashboard" logo={LeaderB}  weight="400"/>
     </Container>
   )
 }

@@ -12,12 +12,20 @@ import Switch from './Micro_components/Switch';
 const darkTheme={
   bg : "linear-gradient(180deg, #23094b 0%, #103673 90%)",
   bgR88 : "#1c073c",
-  color : "white"
+  color : "white",
+  hover : "#2abdf3",
+  colorG766 : "linear-gradient(180deg, #488cff 0%, rgb(238 244 255 / 0%) 100%)",
+  IconBg: "#4eccfa",
+  colorActive: "#00b5ff"
  };
  const lightTheme={
    bg : "linear-gradient(180deg, #FFFFFF 0%, #F1FBFF 100%)",
    bgR88 : "white",
-   color : "black"
+   color : "#172B4D",
+   hover : "#e2f3fa",
+   colorG766 : "linear-gradient(180deg, #EFF5FF 0%, rgba(239, 245, 255, 0) 100%)",
+   IconBg: "white",
+   colorActive: "white"
  }
 
 function App() {
