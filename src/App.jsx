@@ -16,7 +16,8 @@ const darkTheme={
   hover : "#2abdf3",
   colorG766 : "linear-gradient(180deg, #488cff 0%, rgb(238 244 255 / 0%) 100%)",
   IconBg: "#4eccfa",
-  colorActive: "#00b5ff"
+  colorActive: "#00b5ff",
+  progress: "#00b5ff"
  };
  const lightTheme={
    bg : "linear-gradient(180deg, #FFFFFF 0%, #F1FBFF 100%)",
@@ -25,7 +26,8 @@ const darkTheme={
    hover : "#e2f3fa",
    colorG766 : "linear-gradient(180deg, #EFF5FF 0%, rgba(239, 245, 255, 0) 100%)",
    IconBg: "white",
-   colorActive: "white"
+   colorActive: "white",
+   progress: "#172b4dd9"
  }
 
 function App() {
@@ -55,7 +57,7 @@ export default App
 const Wrapper = styled.div`
     height: 1558px;
     width: 1920px;
-    border: 5px solid skyblue;
+    /* border: 5px solid skyblue; */
     background: ${(props)=> props.theme.bg};
     color : ${props=>props.theme.color};
     position: relative;

@@ -22,7 +22,6 @@ const Item = styled.div`
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-
 `
 const BBorder = styled.div`
     height: 1px;

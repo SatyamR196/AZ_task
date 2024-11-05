@@ -35,7 +35,7 @@ const Div327 = styled.div`
 const Head327= styled.div`
   min-height: 82px;
   max-width: 342px;
-  background-color: #EFF5FF;
+  background-color: ${props=>props.theme.hover};
   box-sizing: border-box;
   
   display: flex;
