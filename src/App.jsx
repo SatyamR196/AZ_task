@@ -32,9 +32,7 @@ function App() {
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <Wrapper>
-        {/* <button onClick={toggleTheme}>TOggle</button> */}
         <Switch toggleTheme={toggleTheme} isDarkTheme={isDark}/>
-        Hello world
         <G762/>
         <Rec88/>
         <Sidebar/>
@@ -51,6 +49,7 @@ const Wrapper = styled.div`
     width: 1920px;
     border: 5px solid skyblue;
     background: ${(props)=> props.theme.bg};
+    color : ${props=>props.theme.color};
     position: relative;
     overflow: hidden;
 `;

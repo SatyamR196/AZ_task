@@ -1,10 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
+import SidebarItem from '../Micro_components/SidebarItem'
+import MenuIcon from "../assets/Menu.svg"
+import DashB from "../assets/DashB.svg"
+import LightBulb from "../assets/LightBulbOutline.svg"
+import Forums from "../assets/UserGroupOutline.svg"
+import UpSkill from "../assets/ClipboardOutline.svg"
+import Contest from "../assets/ChartBarOutline.svg"
+import LeaderB from "../assets/StarOutline.svg"
+import AZ_Logo from "../assets/AZ_Logo.svg"
 
 function Sidebar() {
   return (
     <Container>
-      
+      <Headiv>
+      <SidebarItem text="AlgoZenith" logo={MenuIcon} bg="white" weight="900"/>
+      </Headiv>
+      <SidebarItem text="Dashboard" logo={DashB} bg="white" weight="400"/>
+      <SidebarItem text="Dashboard" logo={LightBulb} bg="white" weight="400"/>
+      <SidebarItem text="Dashboard" logo={Forums} bg="white" weight="400"/>
+      <SidebarItem text="Dashboard" logo={UpSkill} bg="white" weight="400"/>
+      <SidebarItem text="Dashboard" logo={Contest} bg="white" weight="400"/>
+      <SidebarItem text="Dashboard" logo={LeaderB} bg="white" weight="400"/>
     </Container>
   )
 }
@@ -18,4 +35,10 @@ const Container = styled.div`
   height: 566px;
   top: 64px;
   left: 78px;
+  display: flex;
+  flex-direction: column;
+  gap:17px;
+`
+const Headiv= styled.div`
+  margin-bottom: 13px;
 `
