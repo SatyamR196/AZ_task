@@ -4,9 +4,9 @@ import Part from '../Micro_components/Part';
 function G326() {
   return (
     <Div326>
-      <Part progress={45} Npart={1}/>
+      <Part progress={45} Npart={1} Open={true}/>
       <Part progress={20} Npart={2}/>
-      <Part progress={0} Npart={3}/>
+      <Part progress={0} Npart={3}/>  
     </Div326>
   )
 }

@@ -6,7 +6,7 @@ function SidebarItem({text,logo,bg="transparent",weight=400}){
   return (
     <Item bg={bg}>
       <IconDiv>
-        <img src={logo}/>
+        {logo}
       </IconDiv>
       {bg === "#D6F4FF" ? <TextDiv style={{color:"black"}} weight={weight}>{text}</TextDiv> : <TextDiv weight={weight}>{text}</TextDiv> }
     </Item>
@@ -39,7 +39,7 @@ const Item = styled.div`
 const IconDiv = styled.div`
     width:32px;
     height: 32px;
-    background-color: white;
+    /* background-color: white; */
 `
 export const TextDiv = styled.div`
     height: 40px;

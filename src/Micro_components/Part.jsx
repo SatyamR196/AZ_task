@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import styled, { useTheme } from "styled-components";
+import Accordian_Item from "./Accordian_Item";
 // import { ProgressBar } from 'primereact/progressbar';
 
 function Part({ progress = 40, Npart = 1, Open = false }) {
   const [show, setShow] = useState(Open);
-  const theme=useTheme();
+  const theme = useTheme();
   return (
     <Container>
       <D1>
@@ -92,21 +93,200 @@ function Part({ progress = 40, Npart = 1, Open = false }) {
                   </linearGradient>
                 </defs>
               </svg>
-              <Svg onClick={()=> setShow(!show)} width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.79709 13.5774L2.79714 13.5775C3.47842 14.1368 4.10151 14.645 4.55643 15.0131C4.72889 15.1526 4.87666 15.2716 4.99402 15.3653C5.01797 15.3461 5.04328 15.3257 5.06991 15.3042C5.31345 15.1079 5.66391 14.8233 6.09558 14.4716C6.95873 13.7684 8.14458 12.7982 9.44475 11.7307L14.1736 7.84826L14.4909 7.58777L14.8082 7.84827L19.537 11.7309C20.8371 12.7984 22.023 13.7686 22.8862 14.4718C23.3179 14.8235 23.6683 15.108 23.9119 15.3044C23.9386 15.3259 23.9639 15.3463 23.9879 15.3655C24.1059 15.2713 24.2546 15.1515 24.4283 15.011C24.8849 14.6416 25.5102 14.1315 26.1939 13.57L26.1939 13.57L28.2121 11.9129L14.4907 0.646939L7.56262 6.33524L7.24534 5.94881L7.56261 6.33525C5.57019 7.97104 3.75903 9.45981 2.44604 10.5406C1.78951 11.0811 1.25771 11.5194 0.890121 11.823C0.851307 11.8551 0.814339 11.8856 0.77926 11.9146C0.859609 11.9813 0.949247 12.0555 1.04708 12.1364C1.49593 12.5077 2.1154 13.0179 2.79709 13.5774Z" fill="#17384D" stroke="white"/>
-              </Svg>
 
+              {/* Toggle arrow -- show hide accordian details */}
+              {show ? (
+                <Svg
+                  onClick={() => setShow(!show)}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 29 16"
+                  height="16"
+                  width="29"
+                >
+                  <g
+                    xmlns="http://www.w3.org/2000/svg"
+                    transform="matrix(-1 0 0 -1 29 16)"
+                  >
+                    <path
+                      d="M2.79709 13.5774L2.79714 13.5775C3.47842 14.1368 4.10151 14.645 4.55643 15.0131C4.72889 15.1526 4.87666 15.2716 4.99402 15.3653C5.01797 15.3461 5.04328 15.3257 5.06991 15.3042C5.31345 15.1079 5.66391 14.8233 6.09558 14.4716C6.95873 13.7684 8.14458 12.7982 9.44475 11.7307L14.1736 7.84826L14.4909 7.58777L14.8082 7.84827L19.537 11.7309C20.8371 12.7984 22.023 13.7686 22.8862 14.4718C23.3179 14.8235 23.6683 15.108 23.9119 15.3044C23.9386 15.3259 23.9639 15.3463 23.9879 15.3655C24.1059 15.2713 24.2546 15.1515 24.4283 15.011C24.8849 14.6416 25.5102 14.1315 26.1939 13.57L26.1939 13.57L28.2121 11.9129L14.4907 0.646939L7.56262 6.33524L7.24534 5.94881L7.56261 6.33525C5.57019 7.97104 3.75903 9.45981 2.44604 10.5406C1.78951 11.0811 1.25771 11.5194 0.890121 11.823C0.851307 11.8551 0.814339 11.8856 0.77926 11.9146C0.859609 11.9813 0.949247 12.0555 1.04708 12.1364C1.49593 12.5077 2.1154 13.0179 2.79709 13.5774Z"
+                      fill="#17384D"
+                      stroke="white"
+                    />
+                  </g>
+                </Svg>
+              ) : (
+                <Svg
+                  onClick={() => setShow(!show)}
+                  width="29"
+                  height="16"
+                  viewBox="0 0 29 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.79709 13.5774L2.79714 13.5775C3.47842 14.1368 4.10151 14.645 4.55643 15.0131C4.72889 15.1526 4.87666 15.2716 4.99402 15.3653C5.01797 15.3461 5.04328 15.3257 5.06991 15.3042C5.31345 15.1079 5.66391 14.8233 6.09558 14.4716C6.95873 13.7684 8.14458 12.7982 9.44475 11.7307L14.1736 7.84826L14.4909 7.58777L14.8082 7.84827L19.537 11.7309C20.8371 12.7984 22.023 13.7686 22.8862 14.4718C23.3179 14.8235 23.6683 15.108 23.9119 15.3044C23.9386 15.3259 23.9639 15.3463 23.9879 15.3655C24.1059 15.2713 24.2546 15.1515 24.4283 15.011C24.8849 14.6416 25.5102 14.1315 26.1939 13.57L26.1939 13.57L28.2121 11.9129L14.4907 0.646939L7.56262 6.33524L7.24534 5.94881L7.56261 6.33525C5.57019 7.97104 3.75903 9.45981 2.44604 10.5406C1.78951 11.0811 1.25771 11.5194 0.890121 11.823C0.851307 11.8551 0.814339 11.8856 0.77926 11.9146C0.859609 11.9813 0.949247 12.0555 1.04708 12.1364C1.49593 12.5077 2.1154 13.0179 2.79709 13.5774Z"
+                    fill="#17384D"
+                    stroke="white"
+                  />
+                </Svg>
+              )}
             </Top>
-            <Bottom>
-                {progress}% Completed
-            </Bottom>
+            <Bottom>{progress}% Completed</Bottom>
           </Right>
         </Content>
         <Bar>
           <ProgressBar progress={progress}></ProgressBar>
         </Bar>
       </D1>
-      {show && <D2>Hello world</D2>}
+
+      {/* // Accordian Item  */}
+
+      {show && (
+        <D2>
+          <Accordian_Item
+            text="Video 1"
+            svg_icon={
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 12V18L22.5 22.5M31.5 18C31.5 19.7728 31.1508 21.5283 30.4724 23.1662C29.7939 24.8041 28.7995 26.2923 27.5459 27.5459C26.2923 28.7995 24.8041 29.7939 23.1662 30.4724C21.5283 31.1508 19.7728 31.5 18 31.5C16.2272 31.5 14.4717 31.1508 12.8338 30.4724C11.1959 29.7939 9.70765 28.7995 8.45406 27.5459C7.20047 26.2923 6.20606 24.8041 5.52763 23.1662C4.84919 21.5283 4.5 19.7728 4.5 18C4.5 14.4196 5.92232 10.9858 8.45406 8.45406C10.9858 5.92232 14.4196 4.5 18 4.5C21.5804 4.5 25.0142 5.92232 27.5459 8.45406C30.0777 10.9858 31.5 14.4196 31.5 18Z"
+                  stroke={theme.color}
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            }
+          />
+          <Accordian_Item
+            text="Article 1"
+            svg_icon={
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.9707 12C11.7027 10.4467 13.6773 9.33333 16 9.33333C18.9467 9.33333 21.3333 11.124 21.3333 13.3333C21.3333 15.2 19.6293 16.7667 17.3253 17.2093C16.6027 17.348 16 17.9293 16 18.6667M16 22.6667H16.0133M28 16C28 17.5759 27.6896 19.1363 27.0866 20.5922C26.4835 22.0481 25.5996 23.371 24.4853 24.4853C23.371 25.5996 22.0481 26.4835 20.5922 27.0866C19.1363 27.6896 17.5759 28 16 28C14.4241 28 12.8637 27.6896 11.4078 27.0866C9.95189 26.4835 8.62902 25.5996 7.51472 24.4853C6.40042 23.371 5.5165 22.0481 4.91345 20.5922C4.31039 19.1363 4 17.5759 4 16C4 12.8174 5.26428 9.76516 7.51472 7.51472C9.76516 5.26428 12.8174 4 16 4C19.1826 4 22.2348 5.26428 24.4853 7.51472C26.7357 9.76516 28 12.8174 28 16Z"
+                  stroke={theme.color}
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_1_150"
+                    x1="5.87499"
+                    y1="4"
+                    x2="25.5625"
+                    y2="4"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#3467AE" />
+                    <stop offset="1" stop-color="#0C4969" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            }
+          />
+
+          <Accordian_Item
+            text="Quiz 1"
+            svg_icon={
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 12V18L22.5 22.5M31.5 18C31.5 19.7728 31.1508 21.5283 30.4724 23.1662C29.7939 24.8041 28.7995 26.2923 27.5459 27.5459C26.2923 28.7995 24.8041 29.7939 23.1662 30.4724C21.5283 31.1508 19.7728 31.5 18 31.5C16.2272 31.5 14.4717 31.1508 12.8338 30.4724C11.1959 29.7939 9.70765 28.7995 8.45406 27.5459C7.20047 26.2923 6.20606 24.8041 5.52763 23.1662C4.84919 21.5283 4.5 19.7728 4.5 18C4.5 14.4196 5.92232 10.9858 8.45406 8.45406C10.9858 5.92232 14.4196 4.5 18 4.5C21.5804 4.5 25.0142 5.92232 27.5459 8.45406C30.0777 10.9858 31.5 14.4196 31.5 18Z"
+                  stroke={theme.color}
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            }
+          />
+
+          <Accordian_Item
+            text="Coding Exercise 1"
+            svg_icon={
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.3333 26.6667L18.6667 5.33334M24 10.6667L29.3333 16L24 21.3333M8 21.3333L2.66666 16L8 10.6667"
+                  stroke={theme.color}
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_1_161"
+                    x1="4.74998"
+                    y1="5.33334"
+                    x2="26.625"
+                    y2="5.33334"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#3467AE" />
+                    <stop offset="1" stop-color="#0C4969" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            }
+          />
+
+          <Accordian_Item
+            text="Combined Resource 1"
+            svg_icon={
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6667 9.33333V20C10.6667 20.7072 10.9476 21.3855 11.4477 21.8856C11.9478 22.3857 12.6261 22.6667 13.3333 22.6667H21.3333M10.6667 9.33333V6.66667C10.6667 5.95942 10.9476 5.28115 11.4477 4.78105C11.9478 4.28095 12.6261 4 13.3333 4H19.448C19.8016 4.00008 20.1407 4.1406 20.3907 4.39067L26.276 10.276C26.5261 10.526 26.6666 10.8651 26.6667 11.2187V20C26.6667 20.7072 26.3857 21.3855 25.8856 21.8856C25.3855 22.3857 24.7072 22.6667 24 22.6667H21.3333M10.6667 9.33333H8C7.29276 9.33333 6.61448 9.61428 6.11438 10.1144C5.61429 10.6145 5.33334 11.2928 5.33334 12V25.3333C5.33334 26.0406 5.61429 26.7189 6.11438 27.219C6.61448 27.719 7.29276 28 8 28H18.6667C19.3739 28 20.0522 27.719 20.5523 27.219C21.0524 26.7189 21.3333 26.0406 21.3333 25.3333V22.6667"
+                  stroke={theme.color}
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_1_172"
+                    x1="6.99999"
+                    y1="4"
+                    x2="24.5"
+                    y2="4"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#3467AE" />
+                    <stop offset="1" stop-color="#0C4969" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            }
+          />
+        </D2>
+      )}
     </Container>
   );
 }
@@ -141,7 +321,7 @@ const Bar = styled.div`
 const ProgressBar = styled.div`
   width: ${(props) => props.progress}%;
   height: 10px;
-  background-color: ${props=>props.theme.progress};
+  background-color: ${(props) => props.theme.progress};
   border-radius: 0 0 10px 10px;
 `;
 const Left = styled.div`
@@ -155,9 +335,9 @@ const Left = styled.div`
   /* bottom: 69px; */
 `;
 const Right = styled.div`
-   position: absolute;
-   right:31px;
-   top:46px;
+  position: absolute;
+  right: 31px;
+  top: 46px;
 `;
 const Text1 = styled.div`
   font-family: DM Sans;
@@ -172,39 +352,38 @@ const Text2 = styled(Text1)`
   font-weight: 700;
 `;
 
-const Top=styled.div`
-    display: flex;
-    align-items: center;
-    gap:20px;
-    background-color: white;
-`
-const Bottom=styled.div`
-    position: absolute;
-    width: 162px;
-    height: 34px;
-    bottom: -58px;
-    background-color: ${props=>props.theme.colorActive};
-    right: 0px;
-    padding: 4px 10px 4px 10px;
-    border-radius: 8px;
-    border: 1px solid #99E4FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: DM Sans;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 26.04px;
-    letter-spacing: -0.03em;
-    text-align: right;
-
-`
+const Top = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+`;
+const Bottom = styled.div`
+  position: absolute;
+  width: 162px;
+  height: 34px;
+  bottom: -58px;
+  background-color: ${(props) => props.theme.colorActive};
+  right: 0px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 8px;
+  border: 1px solid #99e4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26.04px;
+  letter-spacing: -0.03em;
+  text-align: right;
+`;
 
 const Svg = styled.svg`
-    /* position: absolute;
+  /* position: absolute;
     top: 56px;
     right: 31px; */
-    &:hover{
-        cursor: pointer;
-    }
-`
+  &:hover {
+    cursor: pointer;
+  }
+`;
