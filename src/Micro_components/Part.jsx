@@ -363,7 +363,7 @@ const Bottom = styled.div`
   width: 162px;
   height: 34px;
   bottom: -58px;
-  background-color: ${(props) => props.theme.colorActive};
+  background-color: ${(props) => props.theme.hover};
   right: 0px;
   padding: 4px 10px 4px 10px;
   border-radius: 8px;

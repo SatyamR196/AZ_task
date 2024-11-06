@@ -32,7 +32,7 @@ const darkTheme={
    themeColor : "white",
    clockColor : "#608AD2",
    bellBg: "#E7F8FF",
-   hover : "#e2f3fa",
+   hover : "#EFF5FF",
    colorG766 : "linear-gradient(180deg, #EFF5FF 0%, rgba(239, 245, 255, 0) 100%)",
    IconBg: "white",
    colorActive: "white",
