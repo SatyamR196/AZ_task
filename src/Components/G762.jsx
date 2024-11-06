@@ -42,7 +42,7 @@ const Ellipse=styled.div`
 
 const Bell=styled.div`
   border-radius: 6px;
-  background-color: #E7F8FF;
+  background-color: ${props=>props.theme.bellBg};
   height: 49.6px;
   width: 52.4px;
   display: flex;
